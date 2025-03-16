@@ -1,0 +1,185 @@
+/* General body styles */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.road-horizontal, .road-vertical {
+    position: absolute;
+    background-color: #333;
+    z-index: 1;
+}
+
+/* Horizontal and Vertical road styles */
+.road-horizontal {
+    width: 100%;
+    height: 200px;
+}
+
+.road-vertical {
+    width: 200px;
+    height: 100%;
+}
+
+/* Lane dividers */
+.road-horizontal::before, .road-vertical::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.road-horizontal::before {
+    width: 100%;
+    height: 10px;
+    top: 95px;
+    background: repeating-linear-gradient(
+        to right,
+        #fff,
+        #fff 20px,
+        transparent 20px,
+        transparent 40px
+    );
+}
+
+.road-vertical::before {
+    width: 10px;
+    height: 100%;
+    left: 95px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #fff,
+        #fff 20px,
+        transparent 20px,
+        transparent 40px
+    );
+}
+
+/* Center circle */
+.center-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #00ffff; /* Cyan color */
+    border-radius: 50%;
+    border: 5px solid #000;
+    z-index: 3;
+    top: calc(50% - 75px); /* Center the circle vertically */
+    left: calc(50% - 75px); /* Center the circle horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; /* Black text color for better contrast */
+}
+
+/* Junction styles */
+.junction {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    background-color: #001aff; /* Blue color for junctions */
+    border: 3px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px; /* Larger text */
+    font-weight: bold;
+    color: #fff; /* White text color for better contrast */
+    z-index: 4;
+}
+
+/* Position the junctions */
+.junction-b {
+    top: calc(50% - 52px); /* Center vertically on the right edge (East) */
+    right: 0%;
+}
+
+.junction-c {
+    top: 0%; /* North side */
+    left: calc(50% - 52px); /* Center horizontally on the top edge */
+}
+
+.junction-d {
+    top: calc(50% - 52px); /* Center vertically on the left edge (West) */
+    left: 0%;
+}
+
+.junction-e {
+    bottom: 0%;
+    left: calc(50% - 52px);
+}
+
+/* Traffic light styles */
+.traffic-light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 5px;
+}
+
+.red {
+    background-color: grey;
+}
+
+.yellow {
+    background-color: grey;
+}
+
+.green {
+    background-color: grey;
+}
+
+.active {
+    background-color: green; /* Default active color, will be overridden in JS */
+}
+
+/* Add individual light colors */
+#red-b.active, #red-c.active, #red-d.active, #red-e.active {
+    background-color: red;
+}
+
+#yellow-b.active, #yellow-c.active, #yellow-d.active, #yellow-e.active {
+    background-color: yellow;
+}
+
+#green-b.active, #green-c.active, #green-d.active, #green-e.active {
+    background-color: green;
+}
+
+/* Countdown timer styles */
+.countdown {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* White text color for better contrast */
+    z-index: 5;
+}
+
+#countdown-b {
+    top: calc(50% - 35px); /* Adjust to position correctly */
+    right: 10px; /* Adjust position */
+}
+
+#countdown-c {
+    top: 10px; /* Adjust to position correctly */
+    left: calc(50% - 35px); /* Adjust position */
+}
+
+#countdown-d {
+    top: calc(50% - 35px);
+    left: 10px;
+}
+
+#countdown-e {
+    bottom: 10px;
+    left: calc(50% - 35px);
+}

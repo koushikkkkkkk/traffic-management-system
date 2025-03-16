@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cross Road with Traffic Lights</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<script>
+      const data = await response.json();
+      const greenTime =  resultArray[1] * 1000;
+    
+</script>
+<body>
+    <div class="road-horizontal"></div>
+    <div class="road-vertical"></div>
+
+    <!-- Center Circle -->
+    <div class="center-circle">A</div>
+
+    <!-- Junctions with Traffic Lights -->
+    <div class="junction junction-b" id="junction-b">
+        B
+        <div class="traffic-light red" id="red-b"></div>
+        <div class="traffic-light yellow" id="yellow-b"></div>
+        <div class="traffic-light green" id="green-b"></div>
+        <div id="countdown-b" class="countdown">30s</div>
+    </div>
+
+    <div class="junction junction-c" id="junction-c">
+        C
+        <div class="traffic-light red" id="red-c"></div>
+        <div class="traffic-light yellow" id="yellow-c"></div>
+        <div class="traffic-light green" id="green-c"></div>
+        <div id="countdown-c" class="countdown">30s</div>
+    </div>
+
+    <div class="junction junction-d" id="junction-d">
+        D
+        <div class="traffic-light red" id="red-d"></div>
+        <div class="traffic-light yellow" id="yellow-d"></div>
+        <div class="traffic-light green" id="green-d"></div>
+        <div id="countdown-d" class="countdown">30s</div>
+    </div>
+
+    <div class="junction junction-e" id="junction-e">
+        E
+        <div class="traffic-light red" id="red-e"></div>
+        <div class="traffic-light yellow" id="yellow-e"></div>
+        <div class="traffic-light green" id="green-e"></div>
+        <div id="countdown-e" class="countdown">30s</div>
+    </div>
+
+    <script src="static\script.js"></script>
+</body>
+</html>
