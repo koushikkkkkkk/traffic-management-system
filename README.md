@@ -1,4 +1,5 @@
-Project Overview
+**Project Overview**
+
 Urban traffic congestion is a growing challenge, leading to increased travel times, fuel consumption, and emissions. This project leverages Artificial Intelligence (AI) and Reinforcement Learning (RL) to optimize traffic signal timings dynamically based on real-time traffic conditions.
 
 **Key Features**
